@@ -1,0 +1,29 @@
+body {
+  display: flex;
+
+  @include responsive(phone) {
+    flex-direction: column;
+  }
+
+  & .header {
+    order: 2;
+    width: 33.3%;
+    position: relative;
+
+    @include responsive(phone) {
+      order: 1;
+      width: 100%;
+    }
+  }
+
+  & .step-container {
+    order: 1;
+    width: 66.7%;
+    position: relative;
+
+    @include responsive(phone) {
+      order: 2;
+      width: 100%;
+    }
+  }
+}

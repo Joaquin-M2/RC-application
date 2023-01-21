@@ -1,0 +1,32 @@
+.step-counter {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+
+  display: flex;
+  align-items: center;
+
+  &__text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 1rem;
+
+    @include responsive(phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &__dot {
+    margin: 0 0.2rem;
+    font-size: 3rem;
+    color: $color-gray;
+
+    @include responsive(phone) {
+      font-size: 3.5rem;
+    }
+
+    &--active {
+      color: $default-font-color;
+    }
+  }
+}

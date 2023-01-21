@@ -1,0 +1,27 @@
+.button {
+  width: 100%;
+  padding: 1.2rem 1rem;
+  background-color: $color-gray-light;
+
+  border: none;
+  border-radius: 0.1rem;
+
+  font-weight: bold;
+  font-size: 1rem;
+  color: $color-gray;
+
+  cursor: not-allowed;
+
+  transition: all 0.5s ease-in-out;
+
+  @include responsive(phone) {
+    font-size: 2.5rem;
+    padding: 2rem 1rem;
+  }
+
+  &--active {
+    background-color: $color-primary;
+    color: white;
+    cursor: pointer;
+  }
+}

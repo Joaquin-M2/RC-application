@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incsub FE trial task - Joaquín Moreno</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <script
+      src="./assets/scripts/fbea66be76947a9f5495.js"
+      defer
+      type="module"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner-container">
+        <h1 class="header__title">Dummy Heading</h1>
+        <p class="header__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </header>
+    <div class="step-container">
+      <div class="step-counter">
+        <p class="step-counter__text">
+          Step <span id="step-counter__current-step">1</span> of 3
+        </p>
+        <span class="step-counter__dot step-counter__dot--active">·</span>
+        <span class="step-counter__dot">·</span>
+        <span class="step-counter__dot">·</span>
+      </div>
+      <form class="form">
+        <h2 class="form__title">Let's set up your account</h2>
+        <p class="form__sign-in">
+          Already have an account? <a class="link" href="#">Sign in</a>
+        </p>
+
+        <div class="form__field">
+          <label class="form__label" for="username">Your name</label>
+          <input
+            class="form__input"
+            type="text"
+            id="username"
+            placeholder="Your name"
+          />
+          <small class="form__error">Please enter a valid name</small>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="email">Email address</label>
+          <input
+            class="form__input"
+            type="email"
+            id="email"
+            placeholder="Email address"
+          />
+          <button
+            class="form__field-button form__field-button--hide"
+            id="email-button"
+          >
+            <img class="form__field-icon" src="img/SVG/view-show.svg" />
+          </button>
+          <small class="form__error">Please enter a valid email address</small>
+        </div>
+        <div class="form__field">
+          <input
+            class="form__input"
+            placeholder="I would describe my user type as"
+            id="user-type"
+            list="user-type-choices"
+            minlength="2"
+            maxlength="30"
+            required
+          />
+          <label class="form__label" for="user-type"></label>
+          <datalist id="user-type-choices">
+            <option value="Developer"></option>
+            <option value="Designer"></option>
+            <option value="Administrator"></option>
+            <option value="Other (please, specify)"></option>
+          </datalist>
+          <small class="form__error"
+            >Please enter a valid user type (minimum 2 characters)</small
+          >
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="password">Password</label>
+          <input
+            class="form__input"
+            autocomplete="off"
+            type="password"
+            id="password"
+            placeholder="Password"
+          />
+          <button class="form__field-button" id="password-button">
+            <img class="form__field-icon" src="img/SVG/view-show.svg" />
+          </button>
+          <small class="form__password-requirement">Minimum 8 characters</small>
+        </div>
+        <button class="button" id="button">Next</button>
+        <p class="form__legal">
+          By clicking the "Next" button, you agree to creating a free account,
+          and to <a class="link" href="#">Terms of Service</a> and
+          <a class="link" href="#">Privacy Policy</a>.
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

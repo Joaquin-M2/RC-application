@@ -1,0 +1,172 @@
+.form {
+  @include absCenter;
+  width: 40%;
+
+  @include responsive(phone) {
+    top: 10rem;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+
+    @include responsive(phone) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__sign-in {
+    margin-bottom: 3rem;
+
+    @include responsive(phone) {
+      font-size: 2rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__field {
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+
+    &-button {
+      position: absolute;
+      top: 0.45rem;
+      right: 0.5rem;
+
+      display: flex;
+
+      padding: 0.75rem;
+      background-color: white;
+
+      border: none;
+
+      cursor: pointer;
+
+      @include responsive(phone) {
+        padding: 0.9rem;
+      }
+
+      &--hide {
+        display: none;
+      }
+    }
+
+    &-icon {
+      height: 1.3rem;
+
+      @include responsive(phone) {
+        height: 4.5rem;
+      }
+    }
+  }
+
+  &__input {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 1.1rem;
+    border: 1px solid $color-gray-light;
+    border-radius: 0.3rem;
+
+    margin-bottom: 0.5rem;
+
+    @include responsive(phone) {
+      font-size: 2.5rem;
+      padding: 2rem;
+      //margin-bottom: 1rem;
+    }
+
+    &--error {
+      border-color: red;
+    }
+  }
+
+  &__error {
+    display: block;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-200%);
+    transition: all 0.5s ease-in-out;
+
+    &--active {
+      color: red;
+      margin-bottom: 2rem;
+
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0%);
+
+      @include responsive(phone) {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__password-requirement {
+    display: inline-block;
+    margin-bottom: 1rem;
+
+    transition: all 0.5s ease-in-out;
+
+    @include responsive(phone) {
+      font-size: 2rem;
+    }
+
+    &--error {
+      color: red;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: -0.7rem;
+    left: 0.7rem;
+
+    padding: 0 0.5rem;
+
+    background-color: white;
+    color: $color-gray-dark;
+
+    transform: translateY(100%);
+    visibility: hidden;
+
+    transition: all 0.2s ease-in-out;
+
+    @include responsive(phone) {
+      font-size: 2rem;
+      top: -1.5rem;
+    }
+
+    &--active {
+      transform: translateY(0%);
+      display: inline-block;
+
+      visibility: visible;
+    }
+
+    &--error {
+      color: red;
+    }
+  }
+
+  &__legal {
+    margin-top: 3rem;
+    line-height: 2rem;
+
+    @include responsive(phone) {
+      font-size: 2rem;
+      line-height: 3rem;
+      text-align: center;
+    }
+  }
+}
